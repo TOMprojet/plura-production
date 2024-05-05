@@ -9,15 +9,18 @@ import {
 import { pricingCards } from '@/lib/constants'
 import { stripe } from '@/lib/stripe'
 import clsx from 'clsx'
-import { Check } from 'lucide-react'
+import { Dot } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+
 
 export default async function Home() {
   const prices = await stripe.prices.list({
     product: process.env.NEXT_PLURA_PRODUCT_ID,
     active: true,
   })
+  
+  const selectedStrategy = 'Stratégie A';
 
   return (
     <>
@@ -45,15 +48,15 @@ export default async function Home() {
       <section className="flex justify-center items-center flex-col gap-4 md:!mt-64 mt-[-60px]">
         <h2 className="text-4xl text-center"> Choisissez votre stratégie </h2>
         <p className="text-muted-foreground text-center">
-          Vous retrouverez le détail de chaque stratégie lors de la souscription. Le 1er mois est offert.
+          Retrouvez le détail de chaque stratégie dans l'onglet Documentation. Le 1er mois est offert.
         </p>
-        <div className="flex  justify-center gap-4 flex-wrap mt-6">
+        <div className="flex  justify-center gap-4 flex-wrap mt-6 mb-16">
           {prices.data.map((card) => (
             //WIP: Wire up free product from stripe
             <Card
               key={card.nickname}
               className={clsx('w-[300px] flex flex-col justify-between', {
-                'border-2 border-primary': card.nickname === 'Stratégie A',
+                'border-2 border-primary': card.nickname === selectedStrategy,
               })}
             >
               <CardHeader>
@@ -88,7 +91,7 @@ export default async function Home() {
                         key={feature}
                         className="flex gap-2"
                       >
-                        <Check />
+                        <Dot />
                         <p>{feature}</p>
                       </div>
                     ))}

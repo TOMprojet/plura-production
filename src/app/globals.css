@@ -59,8 +59,8 @@ B (255 */
     /* CSS: .bg-gradient { background: var(--gradient) } */
     --gradient: linear-gradient(to top left, #007adf, #00ecbc);
 
-    --background: 275 65% 3.52%;
-    --foreground: 275 10% 97.2%;
+    --background: 220 65% 3.52%;
+    --foreground: 220 10% 97.2%;
 
     --muted: 275 50% 13.2%;
     --muted-foreground: 275 10% 54.4%;
@@ -68,8 +68,8 @@ B (255 */
     --popover: 275 45% 5.72%;
     --popover-foreground: 275 10% 97.2%;
 
-    --card: 275 45% 5.72%;
-    --card-foreground: 275 10% 97.2%;
+    --card: 220 45% 5.72%;
+    --card-foreground: 220 10% 97.2%;
 
     --border: 275 50% 13.2%;
     --input: 275 50% 13.2%;
@@ -119,3 +119,7 @@ B (255 */
     transform: scale(1);
   }
 }
+.selected {
+  border: 2px solid #6a0dad; /* Violet ou la couleur que vous souhaitez */
+}
+
