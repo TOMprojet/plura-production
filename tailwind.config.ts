@@ -15,18 +15,18 @@ module.exports = withUt({
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1400px',
+        '2xl': '1800px',
       },
     },
     extend: {
       colors: {
         tremor: {
           brand: {
-            faint: colors.blue[50],
-            muted: colors.blue[200],
-            subtle: colors.blue[400],
-            DEFAULT: colors.blue[500],
-            emphasis: colors.blue[700],
+            faint: colors.purple[50],
+            muted: colors.purple[200],
+            subtle: colors.purple[400],
+            DEFAULT: colors.purple[500],
+            emphasis: colors.purple[700],
             inverted: colors.white,
           },
           background: {
@@ -51,12 +51,12 @@ module.exports = withUt({
         },
         'dark-tremor': {
           brand: {
-            faint: '#0B1229',
-            muted: colors.blue[950],
-            subtle: colors.blue[800],
-            DEFAULT: colors.blue[500],
-            emphasis: colors.blue[400],
-            inverted: colors.blue[950],
+            faint: '#8A2BE2',
+            muted: colors.purple[950],
+            subtle: colors.purple[800],
+            DEFAULT: colors.purple[500],
+            emphasis: colors.purple[400],
+            inverted: colors.purple[950],
           },
           background: {
             muted: '#131A2B',

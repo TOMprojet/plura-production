@@ -14,12 +14,12 @@ const Navigation = ({ user }: Props) => {
     <div className="fixed top-0 right-0 left-0 p-4 flex items-center justify-between z-10">
       <aside className="flex items-center gap-2">
         <Image
-          src={'./assets/plura-logo.svg'}
+          src={'./assets/Logo-QTS.svg'}
           width={40}
           height={40}
           alt="plur logo"
         />
-        <span className="text-xl font-bold"> Plura.</span>
+        <span className="text-xl font-bold"> Quantum.</span>
       </aside>
       <nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
         <ul className="flex items-center justify-center gap-8">
@@ -34,7 +34,7 @@ const Navigation = ({ user }: Props) => {
           href={'/agency'}
           className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80"
         >
-          Login
+          Se connecter
         </Link>
         <UserButton />
         <ModeToggle />

@@ -11,7 +11,7 @@ import { Toaster as SonnarToaster } from '@/components/ui/sonner'
 const font = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Plura',
+  title: 'Quantum',
   description: 'All in one Agency Solution',
 }
 
@@ -22,13 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="fr"
       suppressHydrationWarning
     >
       <body className={font.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
